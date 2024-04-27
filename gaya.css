@@ -1236,6 +1236,12 @@ footer li {
     font-size: 65%;
   }
 
+  .save .box{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .rsvp .box-gift{
     display: grid;
     grid-template-columns: repeat(1,2fr);
@@ -1427,6 +1433,9 @@ footer li {
     color: var(--text);
     padding: 1rem;
    }
+   .save .box{
+    width: 80vw;
+   }
 }
 
 /* mobile phone */
@@ -1552,12 +1561,19 @@ footer li {
 .save .box{
   display: grid;
   grid-template-columns: 1fr ;
-  margin: auto;
-  text-align: center;
+  width: 80vw;
 }
 
 .save .box-gambar{
-  font-size: 80%;
+  font-size: 1.5rem;
+}
+
+.save .box .box-gambar img{
+  height: auto;
+  width: 70vw;
+}
+.save .box .box-gambar .box-tulis{
+  width: 80vw;
 }
 
 .save .box-2{
