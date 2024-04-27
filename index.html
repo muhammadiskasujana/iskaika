@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Iska & Ika Wedding</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- simplyCountdown -->
+  <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+  <script src="countdown/simplyCountdown.min.js"></script>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="gaya.css">
+</head>
+
+<body>
+
+  <div class="sampul">
+    <div class="box">
+      <img class="logo" src="img/_1a2a0783-1d0f-466f-bb07-768593009575-removebg-preview.png" alt="">
+    </div>
+    <div class="box">
+      <h1>Iska & Ika</h1>
+    </div>
+    <div class="box">
+      <h4>Yth.</h4>
+      <h2 class="nama">Ika Puspita</h2>
+    </div>
+    <div class="box">
+      <a href="#hero" class="btn btn-lg mt-4" onClick="enableScroll()">Buka Undangan</a>
+    </div>
+
+  </div>
+  
+  
+  <section id="hero"
+    class="hero hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+    <main>
+      <div class="box">
+        <img src="img/elem1.png" alt="">
+      </div>
+      <div class="box">
+        <h2>Walimatul 'Urs</h2>
+        <img class="logo" src="img/_1a2a0783-1d0f-466f-bb07-768593009575-removebg-preview.png" alt="">
+      </div>
+      <div class="box">
+        <h1>Iska & Ika</h1>
+      </div>
+      <div class="box">
+        <h2>Ahad</h2>
+      </div>
+      <div class="box-tanggal">
+        <div class="box-d">
+          <h2>Mei</h2>
+        </div>
+        <div class="box-dc">
+          <h2 id="counter">05</h2>
+        </div>
+        <div class="box-d">
+          <h2>2024</h2>
+        </div>
+      </div>
+      <div class="box">
+        <img src="img/elem1.png" alt="">
+      </div>
+      <!-- <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Open the Invitation</a>  -->
+    </main>
+  </section>
+
+  <!-- <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Iska & Ika</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dino</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#couple">Couple</a>
+            <a class="nav-link" href="#story">Story</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#rsvp">RSVP</a>
+            <a class="nav-link" href="#gifts">Gifts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+
+  <section id="to" class="to">
+    <div class="box">
+      <img src="img/elem2.png" alt="">
+    </div>
+    <div class="box">
+      <h4> Yth.</h4>
+    </div>
+    <div class="box">
+      <h2 id="nama" class="nama"></h2>
+    </div>
+    <div id="box-qr">
+      <img src="" id="qr-img">
+    </div>
+    <div class="box">
+    <button onclick="generateQr()">Generate QR Code</button>
+    </div>
+  </section>
+
+  <section id="couple" class="couple">
+    <div class="box">
+      <h1>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</h1>
+      <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
+      <p>Dengan Rahmat dan Ridho Allah Subhanahu wa Ta'ala, dengan segenap kerendahan hati. Perkenankanlah kami mengundang Bapak/Ibu/Saudara/i di acara resepsi perkawinan kami</p>
+    </div>
+    <div class="box-2">
+      <div class="couple-box">
+        <img src="img/bini.png" class="laki" alt="">
+        <h2>Muhammad Iska Sujana, S.Si</h2>
+        <h5>Putra Sulung dari <br><span>Bapak Salman</span></h5>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="couple-box">
+        <img src="img/laki.png" alt="">
+        <h2>Ika Puspita, S.Si</h2>
+        <h5>Putri Sulung dari <br><span>Bapak Sapon</span></h5>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </section>
+  <section id="save" class="save">
+
+    <div class="box">
+      <div class="box-gambar">
+        <img src="img/gambarkami.png" alt="">
+      </div>
+      <div class="box-gambar">
+        <div class="box-tulis">
+        <p>"Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah)."</p>
+        <h5>QS. Adz-Dzariyat ayat : 49</h5>
+      </div>
+      </div>
+    </div>
+    
+    <div class="box-2">
+      <div class="box-gambar">
+        <img src="img/elem3.png" alt="">
+      </div>
+      <div class="box-gambar">
+        <h2>Save the Date</h2>
+      </div>
+      <div class="box-gambar">
+        <img src="img/elem3.png" alt="">
+      </div>
+    </div>
+    <div class="simply-countdown"></div>
+    <div class="box-3">
+      <a href="" id="calendar" class="btn"><span><i class="fa-solid fa-calendar-days"></i></span> Tambahkan ke Kalender</a>
+    </div>
+  </section>
+
+  <section id="lokasi" class="lokasi">
+    <div class="box">
+      <h2>Rangkaian Acara</h2>
+    </div>   
+
+    <div class="box-2">
+      <div class="box-lokasi">
+        <h4>Ahad</h4>
+        <h2>05</h2>
+        <h4>2024</h4>
+      </div>
+
+      <div class="box-lokasi-2">
+        <h4>Resepsi</h4>
+        <p>08.00 WITA - Selesai</p>
+        <p>Bertempat di Rumah Mempelai Pria</p>
+      </div>
+    </div>
+    <div class="box-icon">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="box ">
+      <h4>Ray 6 Tabing Rimbah</h4>
+      <p>Jalan Ray 6 RT 9 RW 3 Desa Tabing Rimbah Kecamatan Mandastana Kabupaten Barito Kuala</p>
+    </div>
+
+    <div class="box">
+      <a href="https://maps.app.goo.gl/kbNSVH7XQjST9jFR7" class="btn"><span><i class="fa-solid fa-location-dot"></i></span> Lokasi</a>
+    </div>
+  </section>
+
+  <section id="rsvp" class="rsvp">
+    <div class="box-rsvp">
+      <h2>RSVP</h2>
+    </div>
+    
+    <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+      <strong>RSVP Berhasil terkirim! </strong> Terimakasih banyak.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <form name="form-rsvp">
+      <div class="box">
+      <div class="box-form"> 
+      <label for="form-nama" class="form-label">Nama</label>
+      <input type="text" name="nama" class="form-control" id="nama" required="1">
+    </div>
+    <div class="box-form"> 
+      <label for="form-jumlah" class="form-label">Jumlah</label>
+      <input type="text" name="jumlah" class="form-control" id="form-jumlah" required="1">
+    </div>
+    <div class="box-form">
+    <label for="status" class="form-label">Konfirmasi</label>
+            <select name="konfirmasi" id="status" class="form-select">
+              <option selected>Pilih salah satu</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+    </div>
+    <div class="box-btn">
+      <button type="submit" class="btn"><span><i class="fa-solid fa-paper-plane"></i></span> Kirim</button>
+    </div>
+  </div>
+    </form>
+
+    <div class="box-adab">
+      <h2>Adab Menghadiri Walimah</h2>
+      <div class="kolom">
+        <div class="kolom-info">
+          <img src="img/icon-masjid1.png" alt="">
+          <h5>Perhatikan waktu shalat</h5>
+        </div>
+        <div class="kolom-info">
+          <img src="img/icon-busana1.png" alt="">
+          <h5>Berpakaian Sopan & Menutup Aurat</h5>
+        </div>
+        <div class="kolom-info">
+          <img src="img/icon-makan1.png" alt="">
+          <h5>Perhatikan Adab Makan & Minum</h5>
+        </div>
+        <div class="kolom-info">
+          <img src="img/Adab-walimah-1.png" alt="">
+          <h5>Menghindari melakukan Ikhtilat</h5>
+        </div>
+        <div class="kolom-info">
+          <img src="img/icon-doa1.png" alt="">
+          <h5>Mendo'akan Kedua Mempelai</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box-elem">
+      <img src="img/elem3.png" alt="">
+    </div>
+
+    <div class="box-rsvp">
+      <h2>GIFT</h2>
+      <p>Apabila Bapak/Ibu/Saudara/i ingin memberikan hadiah kepada kami silakan kirimkan melalui rekening berikut ini:</p>
+      <button class="btn-gift">Kirim <span><i class="fa-solid fa-caret-down rotate"></i></span></button>
+    </div>
+
+    <div class="box-gift d-none"> 
+      <div class="box-dana">
+        <div class="kolom-dana">
+          <img src="img/1637497527.jpeg" alt="">
+          <img class="qr-dana" src="img/qr-dana.png" alt="">
+          <h4>a.n Muhammad Iska Sujana</h4>
+          <h2 class="dana">085754855140</h2>
+
+          <button class="copy"><span><i class="fa-solid fa-copy"></i></span> Salin No Dana</button>
+        </div>
+      </div>
+      <div class="box-rekening">
+        <div class="kolom-dana">
+          <img src="img/Logo-Bank-BRI-3.jpg" alt="">
+          <img class="qr-dana" src="img/qr-dana.png" alt="">
+          <h4>a.n Muhammad Iska Sujana</h4>
+          <h2 class="dana">452701009191539</h2>
+
+          <button class="copy-rek"><span><i class="fa-solid fa-copy"></i></span> Salin No Rekening</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="doa">
+      <h2>DOA UNTUK KEDUA MEMPELAI</h2>
+      <h4>بارك الله لكما وبارك عليكما وَجَمَعَ بَيْنَكُمَا فِى خَيْرٍ</h4>
+      <p>"Semoga Allah memberkahi kalian berdua ketika bahagia dan ketika susah dan mengumpulkan kalian berdua dalam kebaikan."</p>
+      <h5>(HR. Abu Daud, no. 2130). </h5>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <small class="block">&copy; 2024 Iska dan Ika Copyright.</small>
+          <small class="block">Design by <a href="https://instagram.com/sandhikagalih">Iska dan Ika</a>.</small>
+
+          <ul class="mt-3">
+            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="audio-container">
+    <audio id="song" autoplay loop>
+      <source src="audio/hy-zogty-hiya-zaujatii-vocals-baru.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-icon-wrapper" style="display: none;">
+      <i class="bi bi-disc"></i>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw_8651yaF9afapJMK6kSgQO6Vn8MkwGnsttOpW8YRH63FnoxTMn4XurlEbCUPRkQ/exec'
+    const form = document.forms['form-rsvp']
+    const btnKirim = document.querySelector('.rsvp form .box-btn');
+    const myAlert = document.querySelector('.alert');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          myAlert.classList.remove('d-none');
+          myAlert.classList.add('d-flex');
+            console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw_8651yaF9afapJMK6kSgQO6Vn8MkwGnsttOpW8YRH63FnoxTMn4XurlEbCUPRkQ/exec'
+    const form = document.forms['form-ucapan']
+    const btnKirim = document.querySelector('.rsvp form .btn-ucapan');
+    const myAlert = document.querySelector('.alert');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          myAlert.classList.remove('d-none');
+          myAlert.classList.add('d-flex');
+            console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+
+
+  </script>
+
+  <script>
+
+const faFa = document.querySelector('.fa-caret-down')
+// Fungsi untuk menampilkan container dengan animasi swipe
+function swipeIn(element) {
+    element.classList.remove('d-none');
+    element.classList.add('swipeIn', 'd-grid');
+}
+
+// Fungsi untuk menyembunyikan container dengan animasi swipe
+function swipeOut(element) {
+    element.classList.remove('d-grid', 'swipeIn');
+    element.classList.add('swipeOut');
+    setTimeout(function() {
+        element.classList.add('d-none');
+        element.classList.remove('swipeOut');
+    }, 500); // Waktu animasi (500ms = 0.5 detik)
+}
+
+// Mendapatkan elemen container
+var container = document.querySelector('.rsvp .box-gift');
+
+// Mendapatkan tombol toggle
+var toggleButton = document.querySelector('.rsvp .box-rsvp .btn-gift');
+
+// Mendengarkan klik tombol toggle
+toggleButton.addEventListener('click', function() {
+    // Cek apakah container sudah ditampilkan atau tidak
+    if (container.classList.contains('d-none')) {
+        // Jika container belum ditampilkan, tampilkan dengan animasi swipe
+        swipeIn(container);
+        faFa.classList.remove('rotate');
+    } else {
+        // Jika container sudah ditampilkan, sembunyikan dengan animasi swipe
+        swipeOut(container);
+        faFa.classList.add('rotate');
+    }
+}); 
+  </script>
+ 
+ <!-- <script>
+
+  // Fungsi untuk menampilkan container dengan animasi swipe
+  function swipeIn(element) {
+      element.classList.remove('hilang');
+      element.classList.add('swipeIn', 'muncul');
+  }
+  
+  // Fungsi untuk menyembunyikan container dengan animasi swipe
+  function swipeOut(element) {
+      element.classList.remove('muncul', 'swipeIn');
+      element.classList.add('swipeOut');
+      setTimeout(function() {
+          element.classList.add('hilang');
+          element.classList.remove('swipeOut');
+      }, 500); // Waktu animasi (500ms = 0.5 detik)
+  }
+  
+  // Mendapatkan elemen container
+  var container = document.querySelector('.sampul');
+  
+  // Mendapatkan tombol toggle
+  var toggleButton = document.querySelector('.sampul .box .btn');
+  
+  // Mendengarkan klik tombol toggle
+  toggleButton.addEventListener('click', function() {
+      // Cek apakah container sudah ditampilkan atau tidak
+      if (container.classList.contains('hilang')) {
+          // Jika container belum ditampilkan, tampilkan dengan animasi swipe
+          swipeIn(container);
+          
+      } else {
+          // Jika container sudah ditampilkan, sembunyikan dengan animasi swipe
+          swipeOut(container);
+
+      }
+  }); 
+    </script>  -->
+
+<script>
+  // Mendapatkan elemen tombol dan teks sumber
+var copyButton = document.querySelector('.rsvp .box-gift .box-dana .kolom-dana .copy');
+var sourceText = document.querySelector('.rsvp .box-gift .box-dana .kolom-dana .dana');
+
+var copyButtonRek = document.querySelector('.rsvp .box-gift .box-rekening .kolom-dana .copy-rek');
+var sourceTextRek = document.querySelector('.rsvp .box-gift .box-rekening .kolom-dana .dana');
+
+// Mendengarkan klik tombol
+copyButton.addEventListener('click', function() {
+    // Salin teks dari elemen sumber
+    var textToCopy = sourceText.innerText;
+
+    // Buat elemen input untuk menampung teks yang akan disalin
+    var input = document.createElement('input');
+    input.setAttribute('value', textToCopy);
+    document.body.appendChild(input);
+
+    // Pilih teks di dalam input
+    input.select();
+    input.setSelectionRange(0, 99999); // Untuk browser yang tidak support select() pada input
+
+    // Salin teks yang dipilih
+    document.execCommand('copy');
+
+    // Hapus elemen input yang sudah tidak diperlukan
+    document.body.removeChild(input);
+
+    // Beri tahu pengguna bahwa teks sudah disalin
+    alert('Teks telah disalin: ' + textToCopy);
+});
+
+copyButtonRek.addEventListener('click', function() {
+    // Salin teks dari elemen sumber
+    var textToCopy = sourceTextRek.innerText;
+
+    // Buat elemen input untuk menampung teks yang akan disalin
+    var input = document.createElement('input');
+    input.setAttribute('value', textToCopy);
+    document.body.appendChild(input);
+
+    // Pilih teks di dalam input
+    input.select();
+    input.setSelectionRange(0, 99999); // Untuk browser yang tidak support select() pada input
+
+    // Salin teks yang dipilih
+    document.execCommand('copy');
+
+    // Hapus elemen input yang sudah tidak diperlukan
+    document.body.removeChild(input);
+
+    // Beri tahu pengguna bahwa teks sudah disalin
+    alert('Teks telah disalin: ' + textToCopy);
+});
+</script>
+
+  <script>
+    simplyCountdown('.simply-countdown', {
+      year: 2024, // required
+      month: 5, // required
+      day: 5, // required
+      hours: 8, // Default is 0 [0-23] integer
+      words: { //words displayed into the countdown
+        days: { singular: 'hari', plural: 'hari' },
+        hours: { singular: 'jam', plural: 'jam' },
+        minutes: { singular: 'menit', plural: 'menit' },
+        seconds: { singular: 'detik', plural: 'detik' }
+      },
+    });
+  </script>
+
+  <script>
+    const stickyTop = document.querySelector('.sticky-top');
+    const offcanvas = document.querySelector('.offcanvas');
+
+    offcanvas.addEventListener('show.bs.offcanvas', function () {
+      stickyTop.style.overflow = 'visible';
+    });
+
+    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+      stickyTop.style.overflow = 'hidden';
+    });
+
+  </script>
+
+  <script>
+    const rootElement = document.querySelector(":root");
+    const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+    const audioIcon = document.querySelector('.audio-icon-wrapper i');
+    const song = document.querySelector('#song');
+    let isPlaying = false;
+
+    function disableScroll() {
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+      window.onscroll = function () {
+        window.scrollTo(scrollTop, scrollLeft);
+      }
+
+      rootElement.style.scrollBehavior = 'auto';
+    }
+
+    function enableScroll() {
+      window.onscroll = function () { }
+      rootElement.style.scrollBehavior = 'smooth';
+      // localStorage.setItem('opened', 'true');
+      playAudio();
+    }
+
+    function playAudio() {
+      song.volume = 0.1;
+      audioIconWrapper.style.display = 'flex';
+      song.play();
+      isPlaying = true;
+    }
+
+    audioIconWrapper.onclick = function () {
+      if (isPlaying) {
+        song.pause();
+        audioIcon.classList.remove('bi-disc');
+        audioIcon.classList.add('bi-pause-circle');
+      } else {
+        song.play();
+        audioIcon.classList.add('bi-disc');
+        audioIcon.classList.remove('bi-pause-circle');
+      }
+
+      isPlaying = !isPlaying;
+    }
+
+    // if (!localStorage.getItem('opened')) {
+    //   disableScroll();
+    // }
+    disableScroll();
+  </script>
+  <script>
+    window.addEventListener("load", function () {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+          .then(() => {
+            alert("Konfirmasi kehadiran berhasil terkirim!");
+          })
+      });
+    });
+
+  </script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('n') || '';
+    const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+    const namaContainer = document.querySelector('.to .box .nama');
+    const namaContainer2 = document.querySelector('.sampul .nama');
+    
+    namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+    namaContainer2.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+
+  </script>
+
+  <script>
+   // Mendapatkan elemen counter
+var counter = document.getElementById('counter');
+
+// Mengatur nilai awal counter
+var count = 0;
+
+// Mengatur interval untuk mengubah nilai counter setiap 500ms (setengah detik)
+var interval = setInterval(function() {
+    count++;
+    counter.textContent = count;
+
+    // Berhenti interval ketika mencapai nilai 10
+    if (count >= 5) {
+        clearInterval(interval);
+    }
+}, 200); // Ganti angka 500 dengan durasi yang diinginkan (dalam milidetik)
+
+  </script>
+
+  <script>
+    ScrollReveal({
+    distance: '80px',
+    duration: 2000,
+    delay: 200,
+});
+
+ScrollReveal().reveal('.box-2, .box-lokasi, .box-lokasi-2, .box-adab', { origin:'top'});
+ScrollReveal().reveal('h2,h1,.box,.simply-countdown', { origin:'bottom'});
+ScrollReveal().reveal('h4,h5,h6', { origin:'left'});
+ScrollReveal().reveal('p, form', { origin:'right'});
+
+  </script>
+
+<script>
+  let boxQr = document.getElementById("box-qr");
+  let qrImage = document.getElementById("qr-img");
+  let qrText = document.getElementById("nama");
+
+  function generateQr(){
+    qrImage.src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value;
+  }
+</script>
+</body>
+
+</html>

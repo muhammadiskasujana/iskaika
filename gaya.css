@@ -1,0 +1,1641 @@
+:root {
+  --text: #5E5872;
+  --bg: #d8d8d8;
+  --shadow: 0 2px 2px var(--bg);
+}
+
+#counter {
+  font-weight: bold;
+  animation: countAnimation 10s steps(1);
+}
+
+@keyframes countAnimation {
+  from { content: '0'; }
+  to { content: '5'; } /* Ganti 31 dengan jumlah hari dalam bulan tertentu */
+}
+
+
+@font-face {
+  font-family: 'Quesha Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quesha Regular'), url('Quesha.woff') format('woff');
+  }
+
+  .swipeIn {
+    animation: swipeIn 0.5s forwards;
+}
+
+.hilang{
+  display: none;
+}
+
+.muncul{
+  display: flex;
+}
+
+/* Animasi untuk swipe keluar */
+.swipeOut {
+    animation: swipeOut 0.5s forwards;
+}
+
+/* Animasi untuk swipe masuk */
+@keyframes swipeIn {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Animasi untuk swipe keluar */
+@keyframes swipeOut {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+
+
+.rotate {
+  transform: rotate(-90deg);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: 'Work Sans', sans-serif;
+  min-height: 4000px;
+}
+
+.sampul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/26958.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale();
+}
+
+.sampul {
+  position: relative;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  text-align: center;
+  padding: 5rem;
+
+}
+
+/* .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opacity 0.5 */
+  z-index: 9999; /* Menempatkan overlay di atas konten lain */
+  animation-duration: 0.5s; /* Durasi animasi */
+  animation-fill-mode: forwards; /* Tetap pada frame terakhir setelah animasi selesai */
+  animation-timing-function: ease; /* Fungsi waktu animasi */
+  animation-name: swipeIn; /* Mulai dengan animasi swipeIn */
+  opacity: 0; /* Mulai dengan opacity 0 (sembunyikan overlay) */
+} */
+
+.sampul .box{
+  display: flexbox;
+  align-items: center;
+
+}
+.sampul .box img{
+  display: flexbox;
+  position: relative;
+  align-items: center;
+  height: auto;
+  width: 250px;
+
+} 
+
+.sampul .logo{
+  display: flexbox;
+  position: relative;
+  align-items: center;
+  height: auto;
+  width: 100px;
+}
+
+/* .sampul h1,
+.sampul h4,
+.sampul p,
+.sampul h2 {
+  text-shadow: var(--shadow);
+} */
+
+.sampul h1 {
+  font-family: 'Quesha Regular';
+  font-size: 6rem;
+  color: var(--text);
+
+}
+
+.sampul .box h4 {
+  font-family: 'Quesha Regular';
+  font-size: 2rem;
+  color: var(--text);
+
+}
+
+.sampul .box h2 {
+  font-family: 'Quesha Regular';
+  font-size: 3rem;
+  color: var(--text);
+
+}
+
+.sampul .box .btn {
+  color: var(--bg);
+  background-color: var(--text);
+  
+}
+
+.sampul .box .btn:hover {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/26958.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero .box{
+  display: flexbox;
+
+}
+.hero img{
+  display: flexbox;
+  position: relative;
+  align-items: center;
+  height: auto;
+  width: 15%;
+
+} 
+
+.hero .logo{
+  display: flexbox;
+  position: relative;
+  align-items: center;
+  height: auto;
+  width: 30%;
+}
+
+/* .hero h1,
+.hero h4,
+.hero p,
+.hero h2 {
+  text-shadow: var(--shadow);
+} */
+
+.hero h1 {
+  font-family: 'Quesha Regular';
+  font-size: 10rem;
+  color: var(--text);
+
+}
+
+.hero .box{
+  margin: 20px;
+}
+
+.hero .box-tanggal{
+  display: grid;
+  width: max-content;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.hero .box-tanggal .box-dc h2{
+  font-size: 6rem;
+  margin: auto;
+}
+
+.hero .box-tanggal .box-d{
+  border-top: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+}
+
+.hero .box-tanggal .box-d h2{
+  margin: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.hero h2{
+  margin-bottom: 2rem;
+  color:var(--text) ;
+}
+
+.hero h4 {
+  position: relative;
+  font-size: 1.8rem;
+  font-family:  light;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 20rem;
+}
+
+
+.hero a {
+  color: white;
+  background-color: gray;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: white;
+  color: grey;
+}
+
+/* .mynavbar {
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+
+.mynavbar .offcanvas-title {
+  font-family: 'Sacramento', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.mynavbar .nav-link {
+  font-family: regular light;
+  color: white;
+}
+.mynavbar .navbar-brand{
+  font-family: 'Sacramento', cursive;
+  font-size: 2rem;
+  color: white;
+}
+
+.home {
+  background: var(--text);
+  background-size: cover;
+  background-position: center;
+  min-height: 10vh;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+
+.home h2,
+.couple h2,
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
+  color: var(--pink);
+  font-family: 'Sacramento';
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h4{
+  margin-top: 15%;
+  margin-left: 2%;
+  color: white;
+  font-family: light;
+  font-size: 5rem;
+}
+
+
+.home p{
+  color: white;
+  margin-left: 2%;
+  font-size: 1rem;
+  font-style: italic;
+  width: 50%;
+  font-family:'libre-baskerville' !important;
+} */
+
+.to {
+  background: var(--text);
+  background-size: cover;
+  background-position: center;
+  min-height: 10vh;
+  padding-top: 3rem;
+ 
+}
+
+
+.to .box button{
+  color: var(--text);
+  background: var(--bg);
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.to .box button:hover{
+  color: var(--bg);
+  background: var(--text);
+  border-radius: 10px;
+}
+
+#box-qr{
+  width: 200px;
+  border-radius: 5px;
+  max-height: 1000;
+  margin: auto;
+}
+
+#box-qr img{
+  width: 100%;
+  padding: 10px;
+}
+
+/* #box-qr.show-img{
+ max-height: 300px;
+ margin: 10px auto;
+ border: 1px solid var(--bg);
+} */
+
+.to .box img{
+  display: flex;
+  margin: auto;
+}
+
+.to .box{
+  padding: .5rem;
+  text-align: center;
+  color: var(--bg);
+}
+
+.to .box h2{
+  padding-bottom: 3rem;
+}
+
+.couple {
+  background:var(--bg);
+  color: white;
+  padding-top: 3rem;
+}
+
+.couple h1{
+  text-align: center;
+  font-family: 'Quesha Regular';
+  color: var(--text);
+}
+
+.couple h4{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  padding-top: 1rem;
+}
+
+.couple .box p{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin: auto;
+}
+
+.couple .box-2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  text-align: center;
+  color: var(--text);
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.couple .box-2 .couple-box img{
+  padding-top: 4rem;
+  height: auto;
+  width: 25%;
+  align-items: baseline;
+  margin: auto;
+}
+
+.couple .box-2 .couple-box .laki{
+  padding-top: 5rem;
+  height: auto;
+  width: 25%;
+  align-items: baseline;
+  margin: auto;
+}
+
+.couple .box-2 .couple-box h2{
+  padding-top: 2rem;
+  font-family: 'Quesha Regular';
+  font-size: 4rem;
+}
+
+.couple .box-2 .couple-box h5{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.couple .box-2 .couple-box span{
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: .5rem;
+} 
+
+.couple .box-2 .couple-box a i{
+  color: var(--bg);
+  border:.5rem solid var(--bg);
+  border-radius: 40%;
+  border-color: var(--text);
+  background-color: var(--text);
+  font-size: 2rem;
+}
+
+.save {
+  background: var(--text);
+  background-image: url(img/aset-tribal-dayna-1b.png),url(img/aset-tribal-dayna-1bot.png);
+  background-position: top,bottom;
+  background-repeat: repeat-x;
+  background-size: 18%;
+  padding-top: 5rem;
+}
+
+.save .box-3{
+  margin: auto;
+  text-align: center;
+  width: max-content;
+  padding-bottom: 5rem;
+}
+
+.save .box-3 .btn{
+  color: var(--text);
+  margin: auto;
+  text-align: center;
+  width: max-content;
+  background-color: var(--bg);
+  border: var(--bg);
+  box-shadow: var(--bg);
+}
+
+.save .box-3 .btn:hover{
+  color: var(--bg);
+  margin: auto;
+  text-align: center;
+  width: max-content;
+  background-color: var(--text);
+  border: var(--bg);
+  box-shadow: var(--bg);
+}
+
+.save .box{
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr ;
+  margin: auto;
+  text-align: center;
+}
+
+.save .box .box-gambar img{
+  height: 400px;
+  width: autopx;
+
+}
+
+
+.save .box .box-gambar p{
+  color: var(--bg);
+  text-align: center;
+}
+
+.save .box .box-gambar h5{
+  color: var(--bg);
+  text-align: center;
+}
+
+
+.save .box .box-gambar .box-tulis{
+  width: 500px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.save .box-2 {
+  display: grid;
+  padding-top: 5rem;
+  grid-template-columns: repeat(3,1fr);
+  width: max-content;
+  text-align: center;
+  margin: auto;
+}
+
+.save .box-2 img{
+  height:auto;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.save .box-2 h2{
+  color: var(--bg);
+  font-family: 'Quesha Regular';
+  font-size: 5rem;
+
+}
+
+.lokasi{
+  background: var(--bg);
+  padding-top: 5rem;
+}
+
+
+.lokasi .box{
+  color: var(--text);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.lokasi .box h2{
+  color: var(--text);
+  font-size: 5rem;
+  font-family: 'Quesha Regular';
+}
+
+.lokasi .box-2{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  border: 2px solid var(--text);
+  border-radius: 15px;
+}
+
+.lokasi .box-2 .box-lokasi{
+  border-right: 2px solid var(--text);
+}
+
+.lokasi .box-2 .box-lokasi h2{
+  font-size: 5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.lokasi .box-2 .box-lokasi h4{
+  font-size: 3rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.lokasi .box-2 .box-lokasi-2{
+  margin-left: 10px;
+  text-align: center;
+  margin-top: 2.3rem;
+}
+
+.lokasi .box-2 .box-lokasi-2 h4{
+  font-size: 3rem;
+  color: var(--text);
+}
+
+.lokasi .box-2 .box-lokasi-2 p{
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.lokasi .box-icon{
+  padding-top: 2rem;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.lokasi .box h4{
+  color: var(--text);
+  font-size: 2rem;
+}
+
+.lokasi .box p{
+  color: var(--text);
+  padding-bottom: 0;
+}
+
+.lokasi .box a{
+  background-color: var(--text);
+  color: var(--bg);
+  margin-top: -4rem;
+}
+
+.lokasi .box a:hover{
+  background-color: var(--bg);
+  color: var(--text);
+}
+.rsvp {
+  background: var(--text);
+  background-image: url(img/aset-tribal-dayna-1b.png),url(img/aset-tribal-dayna-1bot.png);
+  background-position: top,bottom;
+  background-repeat: repeat-x;
+  background-size: 18%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.rsvp .box-rsvp{
+  color: var(--bg);
+  text-align: center;
+  padding-bottom: 3rem;
+  margin: auto;
+}
+
+.rsvp .box-elem{
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rsvp .box-elem img{
+  text-align: center;
+  width: 250px;
+  height: auto;
+}
+
+.rsvp .box .box-btn .btn{
+  background: var(--bg);
+  color: var(--text);
+}
+
+.rsvp .box .box-btn .btn:hover{
+  background: var(--text);
+  color: var(--bg);
+}
+
+.rsvp .box-rsvp .btn-gift{
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  border-color: var(--text);
+  padding: .3rem;
+}
+
+
+.rsvp .box-rsvp .btn-gift:hover{
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--bg);
+}
+
+.rsvp .box-gift{
+  display: grid;
+  grid-template-columns: repeat(2,2fr);
+  place-items: center;
+  border: 2px solid var(--bg);
+  width: 1000px;
+  margin: auto;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+.rsvp .box-gift .box-dana .kolom-dana img{
+  width: auto;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.rsvp .box-gift .box-dana .kolom-dana h2{
+  padding: 1rem;
+}
+
+.rsvp .box-gift .box-rekening .kolom-dana h2{
+  padding: 1rem;
+}
+
+.rsvp .box-gift .box-dana,
+.rsvp .box-gift .box-rekening{
+  text-align: center;
+}
+
+.rsvp .box-gift .box-rekening .kolom-dana img{
+  width: auto;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.rsvp .box-gift .box-dana .kolom-dana .qr-dana,
+.rsvp .box-gift .box-rekening .kolom-dana .qr-dana
+{
+  width: auto;
+  height: 300px;
+  margin-bottom: 1rem;
+}
+
+.rsvp .box-gift .box-dana .kolom-dana h2,
+.rsvp .box-gift .box-rekening .kolom-dana h2
+{
+  font-size: 2rem;
+  color: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rsvp .box-gift .box-dana .kolom-dana h4,
+.rsvp .box-gift .box-rekening .kolom-dana h4{
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--bg);
+}
+
+.rsvp .box-gift .box-dana .kolom-dana .copy,
+.rsvp .box-gift .box-rekening .kolom-dana .copy-rek{
+  background: var(--bg);
+  border-color: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  padding: .3rem;
+}
+
+.rsvp .box-gift .box-dana .kolom-dana .copy:hover,
+.rsvp .box-gift .box-rekening .kolom-dana .copy-rek:hover{
+  background: var(--text);
+  color: var(--bg);
+  border-radius: 10px;
+  border-color: var(--text);
+  padding: .3rem;
+}
+
+.rsvp .box{
+  color: var(--bg);
+  text-align: center;
+  width: 1000px;
+  margin: auto;
+  border: 2px solid var(--bg);
+  padding-bottom: 1rem;
+  border-radius: 20px;
+  margin-bottom: 5rem;
+}
+
+.rsvp .box .form-label{
+  color: var(--bg);
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  padding-top: 1rem;
+}
+
+.rsvp .box .form-select{
+  color: var(--text);
+  width: 500px;
+  margin: auto;
+}
+
+.rsvp .box-rsvp h2{
+  color: var(--bg);
+  font-size: 5rem;
+  font-family: 'Quesha Regular';
+}
+
+.rsvp .box input{
+  color: var(--text);
+  width: 500px;
+  margin: auto;
+}
+
+.rsvp .box .box-btn .btn {
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+.rsvp .box .box-btn{
+  padding: 1rem;
+}
+
+.rsvp .box-adab{
+  
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  background: var(--bg);
+  border-radius: 20px;
+}
+
+.rsvp .box-adab h2{
+  color: var(--text);
+  font-family: 'Quesha Regular';
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.rsvp .box-adab .kolom{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.rsvp .box-adab .kolom .kolom-info img{
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+}
+
+.rsvp .box-adab .kolom .kolom-info{
+ display: grid;
+ grid-template-columns: 1fr;
+ place-items: center;
+}
+
+.rsvp .box-adab .kolom .kolom-info h5{
+  color: var(--text);
+  margin-bottom: 1rem;
+ }
+
+ .rsvp .doa{
+  background-color: var(--bg);
+  width: 1000px;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  background-image: url(img/aset-tribal-dayna-1b.png),url(img/aset-tribal-dayna-1bot.png);
+  background-position: top,bottom;
+  background-repeat: repeat-x;
+  background-size: 150px;
+  margin-bottom: 5rem;
+ }
+
+ .rsvp .doa h2{
+  font-family: 'Quesha Regular';
+  font-size: 4rem;
+  color: var(--text);
+  padding-bottom: 3rem;
+ }
+
+ .rsvp .doa h4{
+  font-size: 3rem;
+  color: var(--text);
+  padding-bottom: 1rem;
+ }
+
+ .rsvp .doa p,
+ .rsvp .doa h5
+{
+  font-size: 1rem;
+  color: var(--text);
+  padding: 1rem;
+ }
+
+ .rsvp .ucapan{
+  text-align: center;
+ }
+ 
+ .rsvp .ucapan h2{
+  font-family: 'Quesha Regular';
+  font-size: 4rem;
+  color: var(--bg);
+  padding-bottom: 3rem;
+ }
+
+ .rsvp .box-ucapan{
+  width: 1000px;
+  margin: auto;
+ }
+
+ .rsvp .box-ucapan label{
+color: var(--bg);
+ }
+
+.rsvp .box-ucapan .pesan{
+  width: 1000px;
+  border-radius: 10px;
+}
+
+ .rsvp .box-ucapan .btn-ucapan{
+  margin: 10px;
+  margin-left: 0;
+  color: var(--text);
+  background: var(--bg);
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+ }
+
+ .rsvp .box-ucapan .btn-ucapan:hover{
+  margin: 10px;
+  margin-left: 0;
+  color: var(--bg);
+  background: var(--text);
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+ }
+
+footer {
+  padding: 3rem;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+footer a {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--bg);
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query */
+/* Extra large */
+@media (max-width: 1200px) {
+  .home .heart {
+    transform: translateX(-50%) translateY(45px);
+  }
+
+  .couple h1{
+    margin-top: 15%;
+    margin-left: 0px;
+  }
+  
+  .couple p{
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  .rsvp .box-gift{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    place-items: center;
+    border: 2px solid var(--bg);
+    width: 700px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h2{
+    padding: 1rem;
+  }
+  
+  .rsvp .box-gift .box-rekening .kolom-dana h2{
+    padding: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana,
+  .rsvp .box-gift .box-rekening{
+    text-align: center;
+  }
+  
+  .rsvp .box-gift .box-rekening .kolom-dana img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .qr-dana,
+  .rsvp .box-gift .box-rekening .kolom-dana .qr-dana
+  {
+    width: 300px;
+    height: auto;
+    margin-bottom: .5rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h2,
+  .rsvp .box-gift .box-rekening .kolom-dana h2
+  {
+    font-size: 2rem;
+    color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h4,
+  .rsvp .box-gift .box-rekening .kolom-dana h4{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--bg);
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .copy,
+  .rsvp .box-gift .box-rekening .kolom-dana .copy-rek{
+    background: var(--bg);
+    border-color: var(--bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: .3rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .copy:hover,
+  .rsvp .box-gift .box-rekening .kolom-dana .copy-rek:hover{
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 10px;
+    border-color: var(--text);
+    padding: .3rem;
+  }
+
+  .rsvp .box-adab .kolom{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+  }
+  
+  .rsvp .box-adab .kolom .kolom-info img{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .rsvp .box-adab{
+  
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    background: var(--bg);
+    border-radius: 20px;
+  }
+
+  .rsvp .box{
+    color: var(--bg);
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    border: 2px solid var(--bg);
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+  }
+
+  .rsvp .box .form-select{
+    color: var(--text);
+    width: 450px;
+    margin: auto;
+  }
+  
+  .rsvp .box .form-control{
+    color: var(--text);
+    width: 450px;
+    margin: auto;
+  }
+
+  .lokasi .box-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 700px;
+  }
+
+  .lokasi .box-2 .box-lokasi{
+    border-right: 2px solid var(--text);
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 70px;
+  }
+
+  .home .heart {
+    display: none;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+  }
+
+  .timeline li .timeline-panel {
+    width: calc((100% - 200px));
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
+
+  .rsvp .doa{
+    background-color: var(--bg);
+    width: 800px;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-image: url(img/aset-tribal-dayna-1b.png),url(img/aset-tribal-dayna-1bot.png);
+    background-position: top,bottom;
+    background-repeat: repeat-x;
+    background-size: 150px;
+    margin-bottom: 5rem;
+   }
+  
+   .rsvp .doa h2{
+    font-family: 'Quesha Regular';
+    font-size: 4rem;
+    color: var(--text);
+    padding-bottom: 3rem;
+   }
+  
+   .rsvp .doa h4{
+    font-size: 3rem;
+    color: var(--text);
+    padding-bottom: 1rem;
+   }
+  
+   .rsvp .doa p,
+   .rsvp .doa h5
+  {
+    font-size: 1rem;
+    color: var(--text);
+    padding: 1rem;
+   }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .rsvp .box-gift{
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    place-items: center;
+    border: 2px solid var(--bg);
+    width: 600px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana img{
+    width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h2{
+    padding: 1rem;
+  }
+  
+  .rsvp .box-gift .box-rekening .kolom-dana h2{
+    padding: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana,
+  .rsvp .box-gift .box-rekening{
+    text-align: center;
+  }
+  
+  .rsvp .box-gift .box-rekening .kolom-dana img{
+    width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .qr-dana,
+  .rsvp .box-gift .box-rekening .kolom-dana .qr-dana
+  {
+    width: 450px;
+    height: auto;
+    margin-bottom: .5rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h2,
+  .rsvp .box-gift .box-rekening .kolom-dana h2
+  {
+    font-size: 2rem;
+    color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h4,
+  .rsvp .box-gift .box-rekening .kolom-dana h4{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--bg);
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .copy,
+  .rsvp .box-gift .box-rekening .kolom-dana .copy-rek{
+    background: var(--bg);
+    border-color: var(--bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: .3rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .copy:hover,
+  .rsvp .box-gift .box-rekening .kolom-dana .copy-rek:hover{
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 10px;
+    border-color: var(--text);
+    padding: .3rem;
+  }
+
+  .rsvp .box-adab .kolom{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+  }
+  
+  .rsvp .box-adab .kolom .kolom-info img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .rsvp .box-adab{
+  
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    background: var(--bg);
+    border-radius: 20px;
+  }
+  
+  .rsvp .box-adab h2{
+    color: var(--text);
+    font-family: 'Quesha Regular';
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .rsvp .box{
+    color: var(--bg);
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    border: 2px solid var(--bg);
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+  }
+
+  .rsvp .box .form-select{
+    color: var(--text);
+    width: 250px;
+    margin: auto;
+  }
+  
+  .rsvp .box .form-control{
+    color: var(--text);
+    width: 250px;
+    margin: auto;
+  }
+  .lokasi .box-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 500px;
+  }
+
+  .lokasi .box-2 .box-lokasi{
+    border-right: none;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 60px;
+    margin: 5px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .timeline li .timeline-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .rsvp .doa{
+    background-color: var(--bg);
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-image: url(img/aset-tribal-dayna-1b.png),url(img/aset-tribal-dayna-1bot.png);
+    background-position: top,bottom;
+    background-repeat: repeat-x;
+    background-size: 120px;
+    margin-bottom: 5rem;
+   }
+  
+   .rsvp .doa h2{
+    font-family: 'Quesha Regular';
+    font-size: 4rem;
+    color: var(--text);
+    padding-bottom: 3rem;
+   }
+  
+   .rsvp .doa h4{
+    font-size: 3rem;
+    color: var(--text);
+    padding-bottom: 1rem;
+   }
+  
+   .rsvp .doa p,
+   .rsvp .doa h5
+  {
+    font-size: 1rem;
+    color: var(--text);
+    padding: 1rem;
+   }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .rsvp .box-gift{
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    place-items: center;
+    border: 2px solid var(--bg);
+    width: 400px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h2{
+    padding: 1rem;
+  }
+  
+  .rsvp .box-gift .box-rekening .kolom-dana h2{
+    padding: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana,
+  .rsvp .box-gift .box-rekening{
+    text-align: center;
+  }
+  
+  .rsvp .box-gift .box-rekening .kolom-dana img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .qr-dana,
+  .rsvp .box-gift .box-rekening .kolom-dana .qr-dana
+  {
+    width: 250px;
+    height: auto;
+    margin-bottom: .5rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h2,
+  .rsvp .box-gift .box-rekening .kolom-dana h2
+  {
+    font-size: 2rem;
+    color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana h4,
+  .rsvp .box-gift .box-rekening .kolom-dana h4{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--bg);
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .copy,
+  .rsvp .box-gift .box-rekening .kolom-dana .copy-rek{
+    background: var(--bg);
+    border-color: var(--bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: .3rem;
+  }
+  
+  .rsvp .box-gift .box-dana .kolom-dana .copy:hover,
+  .rsvp .box-gift .box-rekening .kolom-dana .copy-rek:hover{
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 10px;
+    border-color: var(--text);
+    padding: .3rem;
+  }
+  
+  .rsvp .box-adab .kolom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+  .rsvp .box-adab .kolom .kolom-info img{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 1rem;
+  }
+
+  .rsvp .box-adab{
+  
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    background: var(--bg);
+    border-radius: 20px;
+  }
+  
+  .rsvp .box-adab h2{
+    color: var(--text);
+    font-family: 'Quesha Regular';
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+.home h4{
+  margin-top: 60%;
+  font-size: 4rem;
+}
+
+.home p{
+  font-size: 0.8rem;
+}
+
+.save .box{
+  display: grid;
+  grid-template-columns: 1fr ;
+  margin: auto;
+  text-align: center;
+}
+
+.save .box-gambar{
+  font-size: 80%;
+}
+
+.save .box-2{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.lokasi .box-2{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 300px;
+}
+  
+.couple .box-2{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 500px;
+}
+
+.lokasi .box-2 .box-lokasi{
+  border-right: none;
+}
+  .simply-countdown > .simply-section {
+    padding: 45px;
+    margin: 3px;
+    font-size: 50%;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 31px;
+  }
+
+  .rsvp .doa{
+    background-color: var(--bg);
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-image: url(img/aset-tribal-dayna-1b.png),url(img/aset-tribal-dayna-1bot.png);
+    background-position: top,bottom;
+    background-repeat: repeat-x;
+    background-size: 100px;
+    margin-bottom: 5rem;
+   }
+  
+   .rsvp .doa h2{
+    font-family: 'Quesha Regular';
+    font-size: 4rem;
+    color: var(--text);
+    padding-bottom: 3rem;
+   }
+  
+   .rsvp .doa h4{
+    font-size: 3rem;
+    color: var(--text);
+    padding-bottom: 1rem;
+   }
+  
+   .rsvp .doa p,
+   .rsvp .doa h5
+  {
+    font-size: 1rem;
+    color: var(--text);
+    padding: 1rem;
+   }
+}
