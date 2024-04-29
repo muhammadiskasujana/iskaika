@@ -29,14 +29,14 @@
 
   <div class="sampul">
     <div class="box">
-      <img class="logo" src="img/logo.png" alt="">
+      <img class="logo" src="img/_1a2a0783-1d0f-466f-bb07-768593009575-removebg-preview.png" alt="">
     </div>
     <div class="box">
       <h1>Iska & Ika</h1>
     </div>
     <div class="box">
       <h4>Yth.</h4>
-      <h2 class="nama">Ika Puspita</h2>
+      <h2 id="nama" class="nama">Ika Puspita</h2>
     </div>
     <div class="box">
       <a href="#hero" class="btn btn-lg mt-4" onClick="enableScroll()">Buka Undangan</a>
@@ -53,7 +53,7 @@
       </div>
       <div class="box">
         <h2>Walimatul 'Urs</h2>
-        <img class="logo" src="img/logo.png" alt="">
+        <img class="logo" src="img/_1a2a0783-1d0f-466f-bb07-768593009575-removebg-preview.png" alt="">
       </div>
       <div class="box">
         <h1>Iska & Ika</h1>
@@ -667,9 +667,11 @@ ScrollReveal().reveal('h4,h5,h6', { origin:'left'});
   let boxQr = document.getElementById("box-qr");
   let qrImage = document.getElementById("qr-img");
   let qrText = document.getElementById("nama");
+  var textHua = qrText.innerHTML;
 
   function generateQr(){
-    qrImage.src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value;
+    console.log(textHua);
+    qrImage.src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + textHua;
   }
 </script>
 </body>
